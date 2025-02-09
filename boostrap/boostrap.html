@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -19,16 +19,18 @@
 <body>
   <header>
     <section id="header">
-      <nav class="navbar  fixed-top bg-body-tertiary">
-        <div class="container justify-content-center">
+      <nav class="navbar navbar-expand-md fixed-top bg-light mx-0 p-0">
+        <div class="container-fluid ">
           <a class="navbar-brand" href="#">
             <img src="sources/img/REPOSTERIA-removebg-preview (1).png" alt="Reposteria" width="260" height="75">
           </a>
-        </div>
-        <div class="container justify-content-center border-top">
-          <div class="d-flex py-3">
-            <ul class="nav nav-pills">
-              <li class="nav-item"><a href="#main"class="nav-link">Inicio</a></li>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item"><a href="#main" class="nav-link">Inicio</a></li>
               <li class="nav-item"><a href="#hero" class="nav-link">Sobre mi</a></li>
               <li class="nav-item"><a href="#productmenu" class="nav-link">Menu</a></li>
               <li class="nav-item"><a href="#bakery" class="nav-link">La Reposteria</a></li>
@@ -39,8 +41,8 @@
       </nav>
     </section>
   </header>
-  <main>
-    <section id="main">
+  <main >
+    <section id="main" class="container-fluid mx-0 p-0">
       <div id="carouselExampleCaptions" class="carousel carousel-dark slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -54,22 +56,19 @@
           <div class="carousel-item active">
             <img src="sources/img/1.jfif" class="w-100 object-fit-cover" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
+              
             </div>
           </div>
           <div class="carousel-item">
             <img src="sources/img/2.jfif" class="d-block w-100 object-fit-cover" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
+             
             </div>
           </div>
           <div class="carousel-item">
             <img src="sources/img/5.jfif" class="d-block w-100 object-fit-cover" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
+              
             </div>
           </div>
         </div>
@@ -90,9 +89,11 @@
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-lg-6">
             <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Reposteria Boostrap</h1>
-            <p class="lead">Soy Rafaela Pineda repostera por vocación y amante de los sabores artesanales que evocan recuerdos felices.
-              Desde el año 2023 hemos endulzado los paladares de nuestros clientes con sabores auténticos, descubre la magia de Bootstrap Bakery donde encontraras un pedacito de mi corazón en cada postre.
-              </p>
+            <p class="lead">Soy Rafaela Pineda repostera por vocación y amante de los sabores artesanales que evocan
+              recuerdos felices.
+              Desde el año 2023 hemos endulzado los paladares de nuestros clientes con sabores auténticos, descubre la
+              magia de Bootstrap Bakery donde encontraras un pedacito de mi corazón en cada postre.
+            </p>
           </div>
           <div class="col-12 col-sm-8 col-lg-6">
             <picture>
@@ -105,8 +106,8 @@
       </div>
     </section>
 
-    <section id="productmenu">
-      <div class=" container col-xxl-8 px-4 py-5 my-3 border-bottom">
+    <section id="productmenu" class="container-fluid mb-5">
+      <div class="container col-xxl-8 px-4 py-5 my-3 border-bottom">
         <h2 class="display-5 fw-bold text-body-emphasis text-center lh-1 mb-3">Nuestro Menu</h2>
         <div class="row g-4">
           <div class="col-12 col-md-6 col-lg-6">
@@ -121,7 +122,8 @@
                 <div class="col-md-8">
                   <div class="card-body">
                     <h5 class="card-title">Alfajores</h5>
-                    <p class="card-text">Deliciosas y suaves galletas de maicena rellenas con dulce de leche artesanal.</p>
+                    <p class="card-text">Deliciosas y suaves galletas de maicena rellenas con dulce de leche artesanal.
+                    </p>
                     <div class="h5 pb-2 mb-4 text-danger border-top text-end border-danger">
                       12 X LPS 45.00
                     </div>
@@ -129,7 +131,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <div class="col-12 col-md-6 col-lg-6">
             <div class="card border-0">
@@ -143,7 +144,8 @@
                 <div class="col-md-8">
                   <div class="card-body">
                     <h5 class="card-title">Galletas Pumpkin Spice</h5>
-                    <p class="card-text">Galletas de una masa suave con un topping abundante de glaseado de queso crema sabor calabaza con canela espolvoreada encima.
+                    <p class="card-text">Galletas de una masa suave con un topping abundante de glaseado de queso crema
+                      sabor calabaza con canela espolvoreada encima.
                     <div class="h5 pb-2 mb-4 text-danger border-top text-end border-danger">
                       12 X LPS 500.00
                     </div>
@@ -165,7 +167,8 @@
                 <div class="col-md-8">
                   <div class="card-body">
                     <h5 class="card-title">Volteado de Durazno</h5>
-                    <p class="card-text fs-6">Un bizcocho de miga fina, con un estético topping en almíbar, perfecto para compartir acompañado de te o café.</p>
+                    <p class="card-text fs-6">Un bizcocho de miga fina, con un estético topping en almíbar, perfecto
+                      para compartir acompañado de te o café.</p>
                     <div class="h5 pb-2 mb-4 text-danger border-top text-end border-danger">
                       LPS 400.00
                     </div>
@@ -187,7 +190,8 @@
                 <div class="col-md-8">
                   <div class="card-body">
                     <h5 class="card-title">Marquesote Artesanal</h5>
-                    <p class="card-text">Delicioso pan de miga fina y delicada, con un suave sabor a vainilla, con un topping de crujientes almendras en hojuelas.</p>
+                    <p class="card-text">Delicioso pan de miga fina y delicada, con un suave sabor a vainilla, con un
+                      topping de crujientes almendras en hojuelas.</p>
                     <div class="h5 pb-2 mb-4 text-danger border-top text-end border-danger">
                       LPS 360.00
                     </div>
@@ -209,7 +213,8 @@
                 <div class="col-md-8">
                   <div class="card-body">
                     <h5 class="card-title">Pastel Red Velvet</h5>
-                    <p class="card-text">Dos esponjosas tortas con sabor a chocolate, rellenas de dulce de leche artesanal, cubiertas con abundante glaseado de queso crema sabor vainilla.</p>
+                    <p class="card-text">Dos esponjosas tortas con sabor a chocolate, rellenas de dulce de leche
+                      artesanal, cubiertas con abundante glaseado de queso crema sabor vainilla.</p>
                     <div class="h5 pb-2 mb-4 text-danger border-top text-end border-danger">
                       LPS 500.00
                     </div>
@@ -231,7 +236,9 @@
                 <div class="col-md-8">
                   <div class="card-body">
                     <h5 class="card-title">Tarta de Mora Hondureña</h5>
-                    <p class="card-text">Una base y corteza realizadas de manera artesanal crujiente, con un delicioso sabor a mantequilla de la mejor calidad, y un relleno hecho a base de moras hondureñas, el balance perfecto entre crujiente, acidez y dulzura.</p>
+                    <p class="card-text">Una base y corteza realizadas de manera artesanal crujiente, con un delicioso
+                      sabor a mantequilla de la mejor calidad, y un relleno hecho a base de moras hondureñas, el balance
+                      perfecto entre crujiente, acidez y dulzura.</p>
                     <div class="h5 pb-2 mb-4 text-danger border-top text-end border-danger">
                       LPS 400.00
                     </div>
@@ -253,9 +260,11 @@
                 <div class="col-md-8">
                   <div class="card-body">
                     <h5 class="card-title">Danesas</h5>
-                    <p class="card-text">Perfectas para los amantes del otoño, base crujiente de hojaldre, rellena de calabaza dulce especiada con todos los sabores de la temporada como la canela, nuez moscada, jengibre y clavo de olor, balanceados con el sabor del queso crema saborizado a vanilla.</p>
+                    <p class="card-text">Perfectas para los amantes del otoño, base crujiente de hojaldre, rellena de
+                      calabaza dulce especiada con todos los sabores de la temporada como la canela, nuez moscada,
+                      jengibre y clavo de olor, balanceados con el sabor del queso crema saborizado a vanilla.</p>
                     <div class="h5 pb-2 mb-4 text-danger border-top text-end border-danger">
-                     12 X LPS 420.00
+                      12 X LPS 420.00
                     </div>
                   </div>
                 </div>
@@ -274,7 +283,8 @@
                 <div class="col-md-8">
                   <div class="card-body">
                     <h5 class="card-title">Galletas para Te</h5>
-                    <p class="card-text">Deliciosas y crujientes galletas de mantequilla con sabor a te chai, cortadas con la figura de tu preferencia.</p>
+                    <p class="card-text">Deliciosas y crujientes galletas de mantequilla con sabor a te chai, cortadas
+                      con la figura de tu preferencia.</p>
                     <div class="h5 pb-2 mb-4 text-danger border-top text-end border-danger">
                       12 X LPS 360.00
                     </div>
@@ -287,24 +297,27 @@
       </div>
     </section>
 
-    <section id="bakery" class="bg-info pb-4">
-      <div class="container">
-        <div class="row align-items-center g-lg-5 py-5">
+    <section id="bakery" class=" container-fluid py-5" style="background-color: #99FF7F;">
+      <div class="container py-1">
+        <div class="row align-items-center ">
           <div class="col-12 text-center text-lg-start">
             <h2 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Bienvenidos a Bootstrap Bakery</h2>
-            <p class="col-12 fs-4">Un proyecto que nació de la pasión por la repostería y el deseo de compartir sabores inolvidables, te encantara probarlos! Síguenos en redes sociales y descubre las ultimas novedades que tenemos para ti.</p>
+            <p class="col-12 fs-4">Un proyecto que nació de la pasión por la repostería y el deseo de compartir sabores
+              inolvidables, te encantara probarlos! Síguenos en redes sociales y descubre las ultimas novedades que
+              tenemos para ti.</p>
           </div>
         </div>
       </div>
-      </div>
     </section>
-   
-    <section id="contacto" class="bg-warning pt-4">
-      <div class="container col-xl-10 col-xxl-8">
-        <div class="row align-items-center g-lg-5 py-5">
+
+    <section id="contacto" class="container-fluid py-3 " style="background-color: #FFFF81;">
+      <div class="container col-xl-10 col-xxl-8 py-2">
+        <div class="row align-items-center">
           <div class="col-lg-7 text-center text-lg-start">
             <h2 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Ponte en contacto con nosotros</h2>
-            <p class="col-lg-10 fs-4">Si tienes alguna duda o preferencia ponte en contacto con nosotrso, deja tu comentario, o si tienes una peticion de algo mas personalizado puedes dejarnos tus detalles de contacto llenando el formulario y alguien de ventas se pondra en contacto con tigo.</p>
+            <p class="col-lg-10 fs-4">Si tienes alguna duda o preferencia ponte en contacto con nosotrso, deja tu
+              comentario, o si tienes una peticion de algo mas personalizado puedes dejarnos tus detalles de contacto
+              llenando el formulario y alguien de ventas se pondra en contacto con tigo.</p>
           </div>
           <div class="col-md-10 mx-auto col-lg-5">
             <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
@@ -325,7 +338,7 @@
                 <textarea class="form-control" id="comentario"></textarea required>
                 <label for="comentario">Comentario o peticion</label>
               </div>
-              <button class="w-100 btn btn-lg btn-primary" type="submit">Enviar</button>
+              <button class="w-100 btn btn-lg btn-warning" type="submit">Enviar</button>
             </form>
           </div>
         </div>
@@ -345,10 +358,10 @@
       </div>
 
       <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-facebook"></i></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-instagram"></i></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-twitter-x"></i></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-snapchat"></i></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https:/www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https:/www.x.com" target="_blank"><i class="bi bi-twitter-x"></i></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https:/www.snapchat.com" target="_blank"><i class="bi bi-snapchat"></i></a></li>
       </ul>
     </footer>
   </div>
