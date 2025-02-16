@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -9,72 +9,406 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
 
+
+    <script src="source/javascript/bulma.js"></script>
     <style>
-        .navbar1 {
-            display: flex;
-            align-content: center;
-            justify-content: center;
+        @media (max-width: 768px) {
+            .header-image {
+                background-image: url("https://picsum.photos/id/15/360/740");
+                background-position: center bottom;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                background-color: #999;
+            }
         }
 
-        .navbar1 .navbar-menu {
-            flex-grow: initial;
-            flex-shrink: initial;
+        @media (max-width: 1023px) {
+            .header-image {
+                background-image: url("https://picsum.photos/id/15/2560/1080");
+                background-position: center bottom;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: fill;
+                background-color: #999;
+            }
+        }
+
+        @media (min-width: 1215px) {
+            .header-image {
+                background-image: url("https://picsum.photos/id/15/2560/1080");
+                background-position: center bottom;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: fill;
+                background-color: #999;
+            }
         }
     </style>
-    <script src="source/javascript/bulma.js"></script>
+
 </head>
 
 <body>
     <header>
-        <section id="store">
-            <nav class="navbar navbar1 is-white is-transparent">
-                <div class="navbar-brand">
-                    <a class="navbar-item" href="https://bulma.io">
-                        <svg width="640" height="160" viewBox="0 0 640 160" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M170 132.571V27.5908C170 25.5451 170.915 23.93 172.746 22.7456C174.576 21.5612 176.729 20.969 179.206 20.969H210.377C232.019 20.969 242.84 30.4441 242.84 49.3943C242.84 62.5303 238.264 71.0902 229.112 75.074C234.603 77.2275 238.748 80.2692 241.548 84.1992C244.347 88.1292 245.747 93.8627 245.747 101.4V104.791C245.747 116.743 242.84 125.437 237.026 130.875C231.211 136.312 223.351 139.031 213.445 139.031H179.206C176.514 139.031 174.307 138.385 172.584 137.093C170.861 135.801 170 134.293 170 132.571ZM190.834 120.619H209.085C219.529 120.619 224.751 114.751 224.751 103.015V100.431C224.751 94.401 223.432 90.0404 220.794 87.3486C218.156 84.6568 214.253 83.3109 209.085 83.3109H190.834V120.619ZM190.834 66.8371H208.923C213.122 66.8371 216.326 65.5989 218.533 63.1225C220.74 60.646 221.844 57.2544 221.844 52.9475C221.844 48.7483 220.686 45.4374 218.371 43.0148C216.057 40.5922 212.853 39.3809 208.762 39.3809H190.834V66.8371ZM260.283 103.015V27.4293C260.283 25.2759 261.306 23.6608 263.351 22.5841C265.397 21.5074 267.873 20.969 270.781 20.969C273.688 20.969 276.164 21.5074 278.21 22.5841C280.256 23.6608 281.279 25.2759 281.279 27.4293V103.015C281.279 115.397 287.2 121.588 299.044 121.588C310.888 121.588 316.81 115.397 316.81 103.015V27.4293C316.81 25.2759 317.833 23.6608 319.879 22.5841C321.925 21.5074 324.401 20.969 327.308 20.969C330.215 20.969 332.692 21.5074 334.738 22.5841C336.783 23.6608 337.806 25.2759 337.806 27.4293V103.015C337.806 115.72 334.28 125.061 327.227 131.036C320.175 137.012 310.781 140 299.044 140C287.308 140 277.914 137.039 270.861 131.117C263.809 125.195 260.283 115.828 260.283 103.015ZM356.703 132.409V27.4293C356.703 25.2759 357.725 23.6608 359.771 22.5841C361.817 21.5074 364.293 20.969 367.201 20.969C370.108 20.969 372.584 21.5074 374.63 22.5841C376.676 23.6608 377.699 25.2759 377.699 27.4293V120.619H417.106C419.044 120.619 420.579 121.534 421.709 123.365C422.84 125.195 423.405 127.349 423.405 129.825C423.405 132.301 422.84 134.455 421.709 136.285C420.579 138.116 419.044 139.031 417.106 139.031H365.908C363.432 139.031 361.279 138.439 359.448 137.254C357.618 136.07 356.703 134.455 356.703 132.409ZM434.872 132.409V31.467C434.872 27.9138 435.868 25.2759 437.86 23.5532C439.852 21.8304 442.355 20.969 445.37 20.969C449.354 20.969 452.423 21.6689 454.576 23.0686C456.729 24.4684 459.098 27.4832 461.682 32.1131L481.548 68.2907L501.413 32.1131C503.997 27.4832 506.393 24.4684 508.6 23.0686C510.808 21.6689 513.903 20.969 517.887 20.969C520.902 20.969 523.405 21.8304 525.397 23.5532C527.389 25.2759 528.385 27.9138 528.385 31.467V132.409C528.385 134.455 527.335 136.07 525.236 137.254C523.136 138.439 520.686 139.031 517.887 139.031C514.98 139.031 512.503 138.439 510.458 137.254C508.412 136.07 507.389 134.455 507.389 132.409V62.961L488.493 96.5545C486.985 99.354 484.616 100.754 481.386 100.754C478.264 100.754 475.949 99.354 474.441 96.5545L455.868 61.6689V132.409C455.868 134.455 454.818 136.07 452.719 137.254C450.619 138.439 448.17 139.031 445.37 139.031C442.463 139.031 439.987 138.439 437.941 137.254C435.895 136.07 434.872 134.455 434.872 132.409ZM539.529 130.31C539.529 130.094 539.637 129.556 539.852 128.694L571.023 27.1063C571.669 24.8452 573.257 23.0956 575.787 21.8573C578.318 20.6191 581.198 20 584.428 20C587.658 20 590.565 20.6191 593.149 21.8573C595.734 23.0956 597.349 24.8452 597.995 27.1063L629.166 128.694C629.381 129.556 629.489 130.094 629.489 130.31C629.489 132.678 628.035 134.724 625.128 136.447C622.221 138.17 619.26 139.031 616.245 139.031C612.261 139.031 609.892 137.631 609.139 134.832L603.001 113.351H566.016L559.879 134.832C559.125 137.631 556.756 139.031 552.773 139.031C549.65 139.031 546.662 138.197 543.809 136.528C540.956 134.859 539.529 132.786 539.529 130.31ZM570.377 96.8775H598.479L584.428 47.2948L570.377 96.8775Z"
-                                fill="black" class="bd-svg-black" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M0 110L10 40L50 0L100 50L70 80L110 120L50 160L0 110Z" fill="#00D1B2" />
-                        </svg>
-                    </a>
-                </div>
-            </nav>
-        </section>
-        <section id="menu">
-            <nav class="navbar is-white" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                        data-target="navbarBasicExample">
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                    </a>
-                </div>
-
-                <div id="navbarBasicExample" class="navbar-menu">
-                    <div class="navbar-start">
-                        <a class="navbar-item">
-                            Home
-                        </a>
-
-                        <a class="navbar-item">
-                            Documentation
-                        </a>
+        <section class="hero is-success is-fullheight header-image" id="home">
+            <div class="hero-head">
+                <header class="navbar has-background-primary-dark">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <a class="navbar-item">
+                                <img src="source/img/326325990_1773163193078418_4599326917555325642_n.jpg" alt="Logo" />
+                            </a>
+                            <span class="navbar-burger" data-target="navbarMenuHeroC">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+                        <div id="navbarMenuHeroC" class="navbar-menu has-background-primary-dark">
+                            <div class="navbar-end">
+                                <a class="navbar-item has-text-primary-70"> Home </a>
+                                <a class="navbar-item has-text-primary-70"> Sobre Nosotros </a>
+                                <a class="navbar-item has-text-primary-70"> Actividades </a>
+                                <a class="navbar-item has-text-primary-70"> Contactanos </a>
+                                <a class="navbar-item has-text-primary-70"> Suscribete </a>
+                            </div>
+                        </div>
                     </div>
+                </header>
+            </div>
+            <div class="hero-body">
+                <div class="container has-text-centered  is-large">
+                    <h1 class="title has-text-white">Parque Nacional La Tigra</h1>
+                    <h2 class="subtitle has-text-primary-70 has-background-primary-dark m-2 p-2">El Parque Nacional La
+                        Tigra está ubicado en el departamento de Francisco Morazán,usted podrá vivir una experiencia
+                        inolvidable. Si usted es un apasionado de la naturaleza.</h2>
                 </div>
-            </nav>
-        </section>
+            </div>
     </header>
 
     <main>
+        <section id="about" class="section is-medium">
+            <div class="container has-text-centered ">
+                <h1 class="title">Parque Nacional La Tigra</h1>
+                <p class="subtitle ">cuenta con una extensión de 24,040 hectáreas de bosque dividida en zona de
+                    amortiguamiento y zona núcleo, que forma parte de la cadena montañosa central de Honduras. El parque
+                    nacional es una fuente generadora de agua dulce y pura, así como zona de refugio para la
+                    biodiversidad nativa y migratoria.</p>
+                <p class="subtitle">La Tigra tiene una gran variedad de flora y fauna, entre la vegetación se puede
+                    mencionar especies de árboles como el Pino de Ocote, Robles, Encinos, Liquidámbar, Aguacatillos
+                    entre otros. También existe diversidad de helechos, seis de ellos en peligro de extinción y los
+                    cuales son protegidos por Fundación Amigos de La Tigra, Amitigra.</p>
+                <p class="subtitle">Aquí también podrá observar aves como jilgueros, pavas de montaña, quetzales,
+                    gavilanes, tucanes entre otras más. Entre los reptiles se mencionan pichetes o lagartijas, tamagases
+                    negros y verdes, bejuquillas, corales y boas. Los anfibios están representados por varias especies
+                    de ranas y sapos, pero éstos habitan en las áreas más húmedas del parque.</p>
+                <p class="subtitle">La variedad de insectos es impresionante, no se sabe cuántas especies habitan en el
+                    parque, lo que si podemos decir es que hay un excelente representante de los insectos, nos referimos
+                    a la mariposa azul o Morpho como comúnmente es llamada. En La Tigra también se investigan muchas
+                    especies de insectos nunca antes vistas en la región.</p>
+            </div>
+        </section>
 
+        <section id="actividades" class="box section is-normal">
+            <div class="fixed-grid has-1-cols-mobile has-2-cols-tablet has-3-cols-desktop has-5-cols-widescreen">
+                <div class="grid ">
+                    <div class="cell is-flex flex-grow">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="https://i0.wp.com/www.hondurastips.hn/wp-content/uploads/2016/03/Canopy-La-Tigra-3.jpg"
+                                        alt="canopy" height="960" width="1280" min-widh />
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+
+                                    <div class="media-content">
+                                        <p class="title is-4">Canopy</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Disfrute de una nueva aventura con el canopy del Parque Nacional La Tigra. El
+                                    recorrido lleno de aventura es conformado por 1 kilómetro con 7 cables, 2 puentes
+                                    colgantes y 10 plataformas.
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell is-flex flex-grow">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="https://assets.lummi.ai/assets/Qmcw5Ri9cpHcuPQYi6DDuqwGd8GJXCfQjKqKfHQUDdSJYT?auto=format&w=1500"
+                                        alt="hospedaje" height="960" width="1280" />
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+
+                                    <div class="media-content">
+                                        <p class="title is-4">Hospedaje</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Hospedaje en eco albergues y área de campamento.
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell is-flex flex-grow">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="https://assets.lummi.ai/assets/QmZVcafDFswvGfFsw3mFB4ga1PVgFJ9mxDU4iwcAHTfZVo?auto=format&w=1500"
+                                        alt="senderismo" height="960" width="1280" />
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+
+                                    <div class="media-content">
+                                        <p class="title is-4">Senderismo</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    El parque cuenta con más de 8 rutas señalizadas, con diferentes niveles de
+                                    dificultad.
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell is-flex flex-grow">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="https://assets.lummi.ai/assets/QmTMoTqMQpbGmje2RKGJ9ZxSJh9Fae16nXCtkDDGUamx4t?auto=format&w=1500"
+                                        alt="Placeholder image" height="960" width="1280" />
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+
+                                    <div class="media-content">
+                                        <p class="title is-4">Avistamiento de Animales</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Una actividad ideal para observadores de animales gracias a la presencia de especies
+                                    endémicas.
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell is-flex flex-grow">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="https://picsum.photos/id/309/1280/960" alt="Placeholder image" />
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+
+                                    <div class="media-content">
+                                        <p class="title is-4">Camping </p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Si deseas salir de la rutina, el camping sin duda será tu mejor opción, imagínate
+                                    pasar un fin de semana agradable en medio de la naturaleza.
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Contactanos has-text-centered has-background-primary p-4">
+            <h1 class="title pt-5">Conctactanos</h1>
+            <div class="container">
+
+                <div class="columns p-2 m-2 ">
+                    <div class="box column  has-background-white is-align-content-center p-3 m-3">
+                        <p class="subtitle has-text-centered">
+                            Para más información y reservaciones puede llamar a los teléfonos (504) 8937 6792, (504)
+                            9719 8692 y (504) 2265 1891. También puede comunicarse a la Fundación Amigos de La Tigra al
+                            (504) 2239 9725
+                        </p>
+                    </div>
+                    <div class="box column has-background-white p-3 m-3">
+                        <div class="field is-horizontal">
+                            <div class="field-label is-normal">
+                                <label class="label">Nombre</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <p class="control is-expanded has-icons-left">
+                                        <input class="input" type="text" placeholder="Nombre" required>
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <p class="control is-expanded has-icons-left">
+                                        <input class="input" type="text" placeholder="Apellido" required>
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal">
+                            <div class="field-label is-normal">
+                                <label class="label">Correo</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <p class="control is-expanded has-icons-left">
+                                        <input class="input" type="mail" placeholder="example@mail.com" required>
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal">
+                            <div class="field-label"></div>
+                            <div class="field-body">
+                                <div class="field is-expanded">
+                                    <div class="field has-addons">
+                                        <p class="control">
+                                            <a class="button is-static">
+                                                +504
+                                            </a>
+                                        </p>
+                                        <p class="control is-expanded">
+                                            <input class="input" type="tel" placeholder="Tu celular">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal">
+                            <div class="field-label is-normal">
+                                <label class="label">Depto</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field is-narrow">
+                                    <div class="control">
+                                        <div class="select is-fullwidth">
+                                            <select>
+                                                <option>Francisco Morazan</option>
+                                                <option>Comayagua</option>
+                                                <option>Cortes</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal">
+                            <div class="field-label is-normal">
+                                <label class="label">Asunto</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <input class="input is-danger" type="text" placeholder="Asunto" required>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal">
+                            <div class="field-label is-normal">
+                                <label class="label">Mensaje</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <textarea class="textarea" placeholder="Tu mensaje aqui" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal">
+                            <div class="field-label">
+                                <!-- Left empty for spacing -->
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button is-primary">
+                                            Enviar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contactanos" class="has-background-info">
+            <section class="section">
+
+                <div class="columns">
+                    <div class="column is-half is-offset-one-quarter">
+                        <div class="field is-horizontal">
+                            <div class="field-label is-large">
+                                <label class="label ">Suscribete</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <p class="control is-expanded has-icons-left">
+                                        <input class="input is-large" type="text" placeholder="Nombre" required>
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button is-large is-primary">
+                                            Enviar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
     </main>
 
 
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div class="content has-text-centered">
             <p>
                 <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>.
@@ -85,82 +419,7 @@
             </p>
         </div>
     </footer>
- -->
 
 </body>
 
 </html>
-
-<!-- <header>
-        <section id="navbar">
-            <nav class="navbar has-background-warning" role="navigation" aria-label="main navigation" >
-                <div class="navbar-brand">
-                    <a class="navbar-item" href="https://bulma.io">
-                        <svg width="640" height="160" viewBox="0 0 640 160" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M170 132.571V27.5908C170 25.5451 170.915 23.93 172.746 22.7456C174.576 21.5612 176.729 20.969 179.206 20.969H210.377C232.019 20.969 242.84 30.4441 242.84 49.3943C242.84 62.5303 238.264 71.0902 229.112 75.074C234.603 77.2275 238.748 80.2692 241.548 84.1992C244.347 88.1292 245.747 93.8627 245.747 101.4V104.791C245.747 116.743 242.84 125.437 237.026 130.875C231.211 136.312 223.351 139.031 213.445 139.031H179.206C176.514 139.031 174.307 138.385 172.584 137.093C170.861 135.801 170 134.293 170 132.571ZM190.834 120.619H209.085C219.529 120.619 224.751 114.751 224.751 103.015V100.431C224.751 94.401 223.432 90.0404 220.794 87.3486C218.156 84.6568 214.253 83.3109 209.085 83.3109H190.834V120.619ZM190.834 66.8371H208.923C213.122 66.8371 216.326 65.5989 218.533 63.1225C220.74 60.646 221.844 57.2544 221.844 52.9475C221.844 48.7483 220.686 45.4374 218.371 43.0148C216.057 40.5922 212.853 39.3809 208.762 39.3809H190.834V66.8371ZM260.283 103.015V27.4293C260.283 25.2759 261.306 23.6608 263.351 22.5841C265.397 21.5074 267.873 20.969 270.781 20.969C273.688 20.969 276.164 21.5074 278.21 22.5841C280.256 23.6608 281.279 25.2759 281.279 27.4293V103.015C281.279 115.397 287.2 121.588 299.044 121.588C310.888 121.588 316.81 115.397 316.81 103.015V27.4293C316.81 25.2759 317.833 23.6608 319.879 22.5841C321.925 21.5074 324.401 20.969 327.308 20.969C330.215 20.969 332.692 21.5074 334.738 22.5841C336.783 23.6608 337.806 25.2759 337.806 27.4293V103.015C337.806 115.72 334.28 125.061 327.227 131.036C320.175 137.012 310.781 140 299.044 140C287.308 140 277.914 137.039 270.861 131.117C263.809 125.195 260.283 115.828 260.283 103.015ZM356.703 132.409V27.4293C356.703 25.2759 357.725 23.6608 359.771 22.5841C361.817 21.5074 364.293 20.969 367.201 20.969C370.108 20.969 372.584 21.5074 374.63 22.5841C376.676 23.6608 377.699 25.2759 377.699 27.4293V120.619H417.106C419.044 120.619 420.579 121.534 421.709 123.365C422.84 125.195 423.405 127.349 423.405 129.825C423.405 132.301 422.84 134.455 421.709 136.285C420.579 138.116 419.044 139.031 417.106 139.031H365.908C363.432 139.031 361.279 138.439 359.448 137.254C357.618 136.07 356.703 134.455 356.703 132.409ZM434.872 132.409V31.467C434.872 27.9138 435.868 25.2759 437.86 23.5532C439.852 21.8304 442.355 20.969 445.37 20.969C449.354 20.969 452.423 21.6689 454.576 23.0686C456.729 24.4684 459.098 27.4832 461.682 32.1131L481.548 68.2907L501.413 32.1131C503.997 27.4832 506.393 24.4684 508.6 23.0686C510.808 21.6689 513.903 20.969 517.887 20.969C520.902 20.969 523.405 21.8304 525.397 23.5532C527.389 25.2759 528.385 27.9138 528.385 31.467V132.409C528.385 134.455 527.335 136.07 525.236 137.254C523.136 138.439 520.686 139.031 517.887 139.031C514.98 139.031 512.503 138.439 510.458 137.254C508.412 136.07 507.389 134.455 507.389 132.409V62.961L488.493 96.5545C486.985 99.354 484.616 100.754 481.386 100.754C478.264 100.754 475.949 99.354 474.441 96.5545L455.868 61.6689V132.409C455.868 134.455 454.818 136.07 452.719 137.254C450.619 138.439 448.17 139.031 445.37 139.031C442.463 139.031 439.987 138.439 437.941 137.254C435.895 136.07 434.872 134.455 434.872 132.409ZM539.529 130.31C539.529 130.094 539.637 129.556 539.852 128.694L571.023 27.1063C571.669 24.8452 573.257 23.0956 575.787 21.8573C578.318 20.6191 581.198 20 584.428 20C587.658 20 590.565 20.6191 593.149 21.8573C595.734 23.0956 597.349 24.8452 597.995 27.1063L629.166 128.694C629.381 129.556 629.489 130.094 629.489 130.31C629.489 132.678 628.035 134.724 625.128 136.447C622.221 138.17 619.26 139.031 616.245 139.031C612.261 139.031 609.892 137.631 609.139 134.832L603.001 113.351H566.016L559.879 134.832C559.125 137.631 556.756 139.031 552.773 139.031C549.65 139.031 546.662 138.197 543.809 136.528C540.956 134.859 539.529 132.786 539.529 130.31ZM570.377 96.8775H598.479L584.428 47.2948L570.377 96.8775Z"
-                                fill="black" class="bd-svg-black" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M0 110L10 40L50 0L100 50L70 80L110 120L50 160L0 110Z" fill="#00D1B2" />
-                        </svg>
-
-                    </a>
-
-                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                        data-target="navbarBasicExample">
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                    </a>
-                </div>
-
-                <div id="navbarBasicExample" class="navbar-menu">
-                    <div class="navbar-end">
-                        <div class="navbar-item">
-                            <div class="buttons">
-                                <a class="navbar-item has-text-white-bis">
-                                    Home
-                                </a>
-                                <a class="navbar-item has-text-white-bis">
-                                    Home
-                                </a>
-                                <a class="navbar-item has-text-white-bis">
-                                    Home
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </section>
-        <section class="hero is-link is-fullheight">
-            <div class="hero-body">
-                <div class="container has-text-centered">
-                    <p class="title">Title</p>
-                    <p class="subtitle">Subtitle</p>
-                </div>
-            </div>
-        </section>
-    </header>
-    <main>
-        <section class="hero is-large is-info">
-            <div class="hero-body has-text-centered">
-              <p class="title">Large hero</p>
-              <p class="subtitle">Large subtitle</p>
-            </div>
-          </section>
-          <section class="hero is-large is-danger">
-            <div class="hero-body has-text-centered">
-              <p class="title">Large hero</p>
-              <p class="subtitle">Large subtitle</p>
-            </div>
-          </section>
-          <section class="hero is-large is-white">
-            <div class="hero-body has-text-centered" >
-              <p class="title">Large hero</p>
-              <p class="subtitle">Large subtitle</p>
-            </div>
-          </section>
-    </main>-->
