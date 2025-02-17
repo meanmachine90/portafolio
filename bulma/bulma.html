@@ -67,17 +67,18 @@
                         </div>
                         <div id="navbarMenuHeroC" class="navbar-menu has-background-primary-dark">
                             <div class="navbar-end">
-                                <a class="navbar-item has-text-primary-70"> Home </a>
-                                <a class="navbar-item has-text-primary-70"> Sobre Nosotros </a>
-                                <a class="navbar-item has-text-primary-70"> Actividades </a>
-                                <a class="navbar-item has-text-primary-70"> Contactanos </a>
-                                <a class="navbar-item has-text-primary-70"> Suscribete </a>
+                                <a class="navbar-item has-text-primary-70" href="#home"> Home </a>
+                                <a class="navbar-item has-text-primary-70" href="#about"> Sobre Nosotros </a>
+                                <a class="navbar-item has-text-primary-70" href="#actividades"> Actividades </a>
+                                <a class="navbar-item has-text-primary-70" href="#contactanos"> Contactanos </a>
+                                <a class="navbar-item has-text-primary-70" href="/index.html"> Pag. Principal </a>
+                                <!-- <a class="navbar-item has-text-primary-70"> Suscribete </a> -->
                             </div>
                         </div>
                     </div>
                 </header>
             </div>
-            <div class="hero-body">
+            <div class="hero-body" id="home">
                 <div class="container has-text-centered  is-large">
                     <h1 class="title has-text-white">Parque Nacional La Tigra</h1>
                     <h2 class="subtitle has-text-primary-70 has-background-primary-dark m-2 p-2">El Parque Nacional La
@@ -236,7 +237,7 @@
             </div>
         </section>
 
-        <section class="Contactanos has-text-centered has-background-primary p-4">
+        <section id="contactanos" class=" has-text-centered has-background-primary p-4">
             <h1 class="title pt-5">Conctactanos</h1>
             <div class="container">
 
@@ -256,15 +257,7 @@
                             <div class="field-body">
                                 <div class="field">
                                     <p class="control is-expanded has-icons-left">
-                                        <input class="input" type="text" placeholder="Nombre" required>
-                                        <span class="icon is-small is-left">
-                                            <i class="fas fa-user"></i>
-                                        </span>
-                                    </p>
-                                </div>
-                                <div class="field">
-                                    <p class="control is-expanded has-icons-left">
-                                        <input class="input" type="text" placeholder="Apellido" required>
+                                        <input class="input" type="text" placeholder="Nombre Completo" required>
                                         <span class="icon is-small is-left">
                                             <i class="fas fa-user"></i>
                                         </span>
@@ -290,7 +283,9 @@
                         </div>
 
                         <div class="field is-horizontal">
-                            <div class="field-label"></div>
+                            <div class="field-label is-normal">
+                                <label class="label">Telefono</label>
+                            </div>
                             <div class="field-body">
                                 <div class="field is-expanded">
                                     <div class="field has-addons">
@@ -355,7 +350,6 @@
 
                         <div class="field is-horizontal">
                             <div class="field-label">
-                                <!-- Left empty for spacing -->
                             </div>
                             <div class="field-body">
                                 <div class="field">
@@ -372,7 +366,7 @@
             </div>
         </section>
 
-        <section id="contactanos" class="has-background-info">
+        <!-- <section id="suscribete" class="has-background-info">
             <section class="section">
 
                 <div class="columns">
@@ -404,18 +398,16 @@
                     </div>
                 </div>
             </section>
-        </section>
-    </main>
+        </section>-->
+    </main> 
 
 
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>.
-                The source code is licensed
-                <a href="https://opensource.org/license/mit">MIT</a>. The
-                website content is licensed
-                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0//">CC BY NC SA 4.0</a>.
+                <strong>La Tigra</strong> by <a href="/index.html">Alejandro Vasquez</a>.
+                
+                website contruido con proposito de estudo.
             </p>
         </div>
     </footer>
